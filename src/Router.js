@@ -9,9 +9,9 @@ import Acard from './Components/Acard';
 import Scard from './Components/Scard';
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import Settings from "./Components/Settings";
 
 import React,{useState} from "react";
+import EditUserPage from "./Components/EditUserPage";
 
 export default function Router() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -32,7 +32,7 @@ export default function Router() {
             <Route path="/scroll" element={<Scroll />} />
             <Route path="/scard" element={<Scard/>} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
-            <Route path="/settings" element={<Settings/>} />
+            <Route path="/settings" element={<EditUserPage/>} />
             <Route path="/signup" element={<Signup />} />
         </Routes>
     )
